@@ -17,7 +17,7 @@ class ConvertedWard(NamedTuple):
 def read_csv(file_path: str) -> list:
     with open(file_path, "r", encoding="utf-8") as f:
         reader = csv.reader(f)
-        return [row for row in reader]
+        return [row for row in reader][1:]
 
 
 def to_csv(words: list[ConvertedWard]) -> str:
